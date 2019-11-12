@@ -8,13 +8,15 @@ defmodule Gaia do
           plug: Gaia.Router,
           options: [
             dispatch: dispatch(),
-            port: 4000
+            port: 4000,
+            timeout: :infinity
           ]
         ),
         Registry.child_spec(
           keys: :duplicate,
           name: Registry.Gaia
-        )
+        ),
+        {Gaia.Repo, []}
       ]
 
       opts = [strategy: :one_for_one, name: Gaia.Application]
