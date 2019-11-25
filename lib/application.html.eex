@@ -11,9 +11,7 @@
     <header>
       <h1> Welcome to Gaia Chat!</h1>
     </header>
-    <main id="main">
-
-    </main>
+    <main id="main"></main>
     <br>
     <form>
       <input id="username" type="text" placeholder="Your Username">
